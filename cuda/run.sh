@@ -42,8 +42,8 @@ n_threads=$(grep -c ^processor /proc/cpuinfo)
 # Define context window
 n_ctx=4096
 
-# Offload everything to CPU
-n_gpu_layers=0
+# Offload layers to GPU
+n_gpu_layers=10
 
 # Define batch size based on total RAM
 total_ram=$(cat /proc/meminfo | grep MemTotal | awk '{print $2}')
